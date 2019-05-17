@@ -1,0 +1,8 @@
+1
+##start
+WOG 3 3 3
+Hetman_Fort_Hotel 3 3 3
+##end
+IONITY 2 2 2
+WOG-Hetman_Fort_Hotel
+Hetman_Fort_Hotel-IONITY
