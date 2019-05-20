@@ -14,39 +14,34 @@
 
 void	init(t_farm *farm, char **av)
 {
-	int i;
 
-	i = 0;
-	if ((av[1] && av[1][0] == '-' && av[1][1] == 'c' && ft_strlen(av[1]) == 2)
-	|| (av[2] && av[2][0] == '-' && av[2][1] == 'c' && ft_strlen(av[2]) == 2)
-	|| (av[3] && av[3][0] == '-' && av[3][1] == 'c' && ft_strlen(av[3]) == 2))
-	{
-		farm->colors = (char**)malloc(sizeof(char*) * 5);
-		while (i < 5)
-			farm->colors[i++] = (char*)malloc(sizeof(char) * 8);
-		farm->colors[0] = ft_strcpy(farm->colors[0], "\e[91m");
-		farm->colors[1] = ft_strcpy(farm->colors[1], "\e[92m");
-		farm->colors[2] = ft_strcpy(farm->colors[2], "\e[93m");
-		farm->colors[3] = ft_strcpy(farm->colors[3], "\e[94m");
-		farm->colors[4] = ft_strcpy(farm->colors[4], "\e[95m");
-		farm->col = 0;
-	}
-	else
-	{
-		farm->col = -1;
-		farm->colors = NULL;
-	}
-	init2(farm);
+    if (ft_atoi(av[1]) == 1)
+        farm->car = nissan_leaf;
+    else if (ft_atoi(av[1]) == 1)
+        farm->car = bmw_i3;
+    else if (ft_atoi(av[1]) == 1)
+        farm->car = tesla_model_s;
+    ft_printf("The car you have choosen is %s.\n", farm->car.name);
+    farm->flag = 0;
+    farm->room_amount = 0;
+    farm->ways_amount = 0;
+    farm->start_room_id = -1;
+    farm->end_room_id = -1;
+    farm->init = (t_list_stations*)malloc(sizeof(t_list_stations));
+    farm->init->next = NULL;
+    farm->init->prev = NULL;
+    farm->dop = farm->init;
 }
+
 
 int		work(t_farm *farm, char **av)
 {
-	t_ant *ants;
+	t_car *ants;
 
 	if (farm->flag == 1 && is_valid_map(*farm) && is_answer(*farm))
 	{
 		ft_printf("\n");
-		farm->ways = (t_list_charges**)malloc(sizeof(t_list_charges*) *
+		farm->ways = (t_list_stations**)malloc(sizeof(t_list_stations*) *
 				farm->rooms[farm->end_room_id].links_amount);
 		find_ways(farm, 0);
 		bonus_ways(*farm, av);

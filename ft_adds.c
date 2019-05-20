@@ -15,7 +15,7 @@
 void	add_link(t_farm *farm, char *line, int i)
 {
 	int		j;
-	t_charge_st	dop_rm;
+	t_station	dop_rm;
 
 	j = 0;
 	if (farm->rooms[i].links_amount > 0)
@@ -100,10 +100,10 @@ int		is_room(t_farm farm, char *name)
 void	make_room(t_farm *farm)
 {
 	int			    i;
-	t_list_charges	*dop2;
+	t_list_stations	*dop2;
 
 	i = 0;
-	farm->rooms = (t_charge_st*)malloc(sizeof(t_charge_st) * farm->room_amount);
+	farm->rooms = (t_station*)malloc(sizeof(t_station) * farm->room_amount);
 	dop2 = farm->dop;
 	farm->dop->size = ft_list_size(farm->dop);
 	while (dop2->next)

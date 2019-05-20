@@ -12,21 +12,17 @@
 
 #include "lem_in.h"
 
-void	get_way_dop(t_farm *farm, t_list_charges **new)
+void	get_way_dop(t_farm *farm, t_list_stations **new)
 {
-	if (farm->col != -1)
-		farm->ways[farm->ways_amount]->color = farm->colors[farm->col++];
-	if (farm->col == 5)
-		farm->col = 0;
 	farm->ways_amount++;
 	free_list(new);
 }
 
-void	get_way(t_farm *farm, t_list_charges *way, int flag)
+void	get_way(t_farm *farm, t_list_stations *way, int flag)
 {
-	t_list_charges *rm;
-	t_list_charges *dop;
-	t_list_charges *new;
+	t_list_stations *rm;
+	t_list_stations *dop;
+	t_list_stations *new;
 
 	bzero_ways(farm);
 	farm->ways[farm->ways_amount] = ft_list_room_new(farm->rooms[
@@ -51,8 +47,8 @@ void	get_way(t_farm *farm, t_list_charges *way, int flag)
 	find_ways(farm, flag);
 }
 
-int		find_ways_dop(t_farm *farm, t_list_charges **way,
-						 t_list_charges *dop2, t_point i)
+int		find_ways_dop(t_farm *farm, t_list_stations **way,
+						 t_list_stations *dop2, t_point i)
 {
 	if ((*way)->id != farm->end_room_id && (*way)->id != -1)
 		farm->rooms[(*way)->id].flag = 1;
@@ -82,9 +78,9 @@ int		find_ways_dop(t_farm *farm, t_list_charges **way,
 void	find_ways(t_farm *farm, int flag)
 {
 	t_point			i;
-	t_list_charges	*way;
-	t_list_charges	*dop2;
-	t_list_charges	*dop;
+	t_list_stations	*way;
+	t_list_stations	*dop2;
+	t_list_stations	*dop;
 
 	way = ft_list_room_new(farm->rooms[farm->end_room_id]);
 	dop = way;
@@ -110,7 +106,7 @@ void	find_ways(t_farm *farm, int flag)
 void	print_ways(t_farm farm)
 {
 	int			i;
-	t_list_charges	*ways;
+	t_list_stations	*ways;
 
 	i = 0;
 	ft_printf("Amount of ways: %d\n", farm.ways_amount);

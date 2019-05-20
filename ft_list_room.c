@@ -12,13 +12,13 @@
 
 #include "lem_in.h"
 
-t_list_charges		*ft_list_room_new(t_charge_st room)
+t_list_stations		*ft_list_room_new(t_station room)
 {
 	int			i;
-    t_list_charges	*res;
+    t_list_stations	*res;
 
 	i = 0;
-	if (!(res = (t_list_charges*)malloc(sizeof(t_list_charges))))
+	if (!(res = (t_list_stations*)malloc(sizeof(t_list_stations))))
 		return (NULL);
 	res->id = room.id;
 	res->name = room.name;
@@ -41,9 +41,9 @@ t_list_charges		*ft_list_room_new(t_charge_st room)
 	return (res);
 }
 
-int				ft_list_room_find(t_list_charges *dop, int id)
+int				ft_list_room_find(t_list_stations *dop, int id)
 {
-    t_list_charges *room_list;
+    t_list_stations *room_list;
 
 	room_list = dop;
 	while (room_list)
@@ -55,10 +55,10 @@ int				ft_list_room_find(t_list_charges *dop, int id)
 	return (0);
 }
 
-int				ft_list_size(t_list_charges *dop)
+int				ft_list_size(t_list_stations *dop)
 {
-	int			i;
-    t_list_charges *room_list;
+	int			    i;
+    t_list_stations *room_list;
 
 	i = 0;
 	room_list = dop;
@@ -70,9 +70,9 @@ int				ft_list_size(t_list_charges *dop)
 	return (i);
 }
 
-void			free_list(t_list_charges **dop)
+void			free_list(t_list_stations **dop)
 {
-    t_list_charges *tmp;
+    t_list_stations *tmp;
 
 	while (*dop)
 	{
@@ -83,11 +83,11 @@ void			free_list(t_list_charges **dop)
 	}
 }
 
-void			print_ants_movings(t_ant *ants, int ants_amount)
+void			print_ants_movings(t_car *ants, int ants_amount)
 {
 	int			    i;
 	int			    j;
-    t_list_charges	*tmp_way;
+    t_list_stations	*tmp_way;
 
 	i = -1;
 	while (++i < ants_amount)

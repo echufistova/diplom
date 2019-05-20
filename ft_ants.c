@@ -12,13 +12,13 @@
 
 #include "lem_in.h"
 
-t_ant	*create_ants(int ants_amount)
+t_car	*create_ants(int ants_amount)
 {
 	int		i;
-	t_ant	*ants;
+	t_car	*ants;
 
 	i = 0;
-	ants = (t_ant*)malloc(sizeof(t_ant) * ants_amount);
+	ants = (t_car*)malloc(sizeof(t_car) * ants_amount);
 	while (i < ants_amount)
 	{
 		ants[i].number = i + 1;
@@ -30,7 +30,7 @@ t_ant	*create_ants(int ants_amount)
 	return (ants);
 }
 
-int		all_ants_got_end(t_ant *ants, int ants_amount)
+int		all_ants_got_end(t_car *ants, int ants_amount)
 {
 	int i;
 
@@ -43,7 +43,7 @@ int		all_ants_got_end(t_ant *ants, int ants_amount)
 	return (1);
 }
 
-int		get_ants(t_farm farm, t_ant *ants, int current_ants_number)
+int		get_ants(t_farm farm, t_car *ants, int current_ants_number)
 {
 	int	i;
 	int j;
@@ -68,26 +68,24 @@ int		get_ants(t_farm farm, t_ant *ants, int current_ants_number)
 	return (current_ants_number);
 }
 
-int		from_start_to_end(t_farm farm, t_ant *ants)
+int		from_start_to_end(t_farm farm, t_car *ants)
 {
 	int i;
 
 	i = -1;
 	while (++i < farm.ants_amount)
 	{
-		if (farm.col != -1)
-			write(1, "\e[33m", 5);
+
 //		ft_printf("L%d-%s ", ants[i].number,
 //				  farm.rooms[farm.start_room_id].name);
 		ft_printf("L%d-%s ", ants[i].number,
 				farm.rooms[farm.end_room_id].name);
-		write(1, "\e[0m", 4);
 	}
 	ft_printf("\n");
 	return (1);
 }
 
-int		move_ants(t_farm farm, t_ant *ants)
+int		move_ants(t_farm farm, t_car *ants)
 {
 	int j;
 	int counter;

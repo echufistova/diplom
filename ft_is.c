@@ -14,7 +14,7 @@
 
 int		is_valid_name(t_farm farm, const char *name)
 {
-	t_list_charges	*dop;
+	t_list_stations	*dop;
 
 	dop = farm.dop;
 	if (name[0] == 'L' || name[0] == '#' ||
@@ -42,7 +42,7 @@ int		is_valid_map(t_farm farm)
 	return (1);
 }
 
-int		mb_find_answer(t_farm farm, t_list_charges *dop2, t_list_charges **dop)
+int		mb_find_answer(t_farm farm, t_list_stations *dop2, t_list_stations **dop)
 {
 	if (dop2->id == farm.end_room_id)
 	{
@@ -55,9 +55,9 @@ int		mb_find_answer(t_farm farm, t_list_charges *dop2, t_list_charges **dop)
 int		is_answer(t_farm farm)
 {
 	int			j;
-	t_list_charges	*room_list;
-	t_list_charges	*dop2;
-	t_list_charges	*dop;
+	t_list_stations	*room_list;
+	t_list_stations	*dop2;
+	t_list_stations	*dop;
 
 	room_list = ft_list_room_new(farm.rooms[farm.start_room_id]);
 	dop = room_list;
