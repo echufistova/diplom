@@ -110,8 +110,9 @@ void	make_room(t_farm *farm)
 	{
 		farm->rooms[i].id = dop2->id;
 		farm->rooms[i].name = ft_strdup(dop2->name);
-		farm->rooms[i].coord.x = dop2->coord.x;
-		farm->rooms[i].coord.y = dop2->coord.y;
+		farm->rooms[i].charges.midd_charge = dop2->charges.midd_charge;
+		farm->rooms[i].charges.fast_charge = dop2->charges.fast_charge;
+		farm->rooms[i].distance_to_next_station = dop2->distance_to_next_station;
 		farm->rooms[i].links_amount = 0;
 		farm->rooms[i].links = NULL;
 		dop2 = dop2->next;

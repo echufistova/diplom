@@ -1,8 +1,8 @@
 1
 ##start
-WOG 3 3 3
-Hetman_Fort_Hotel 3 3 3
+WOG 1 2 3.323
+Hetman_Fort_Hotel 4 5 43.31312
 ##end
-IONITY 2 2 2
+IONITY 6 7 9.121
 WOG-Hetman_Fort_Hotel
 Hetman_Fort_Hotel-IONITY

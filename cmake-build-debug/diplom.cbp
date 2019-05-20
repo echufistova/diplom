@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="diplom"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/echufy/diplom/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/echufy/diplom/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/echufy/diplom/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/echufy/diplom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/echufy/diplom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/echufy/diplom/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/echufy/diplom/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/echufy/diplom/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/echufy/diplom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/echufy/diplom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="diplom">
+				<Option output="/home/echufy/diplom/cmake-build-debug/diplom" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/echufy/diplom/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/echufy/diplom/."/>
+					<Add directory="/home/echufy/diplom/libft"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/echufy/diplom/cmake-build-debug/Makefile&quot;  VERBOSE=1 diplom"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/echufy/diplom/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/echufy/diplom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/echufy/diplom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="diplom/fast">
+				<Option output="/home/echufy/diplom/cmake-build-debug/diplom" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/echufy/diplom/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/echufy/diplom/."/>
+					<Add directory="/home/echufy/diplom/libft"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/echufy/diplom/cmake-build-debug/Makefile&quot;  VERBOSE=1 diplom/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/echufy/diplom/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/echufy/diplom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/echufy/diplom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/echufy/diplom/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/echufy/diplom/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/echufy/diplom/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/echufy/diplom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/echufy/diplom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/echufy/diplom/ft_adds.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/ft_ants.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/ft_bonuses.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/ft_get.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/ft_is.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/ft_list_room.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/ft_ways.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/lem_in.h">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_atoi.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_bzero.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_cl.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_cw.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_dopfile.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_dopfile1.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_flags.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_foreach.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_intlength.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_isalnum.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_isalpha.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_isascii.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_isdigit.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_isprint.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_itoa.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_itoa_unsigned.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_lstadd.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_lstdel.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_lstdelone.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_lstiter.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_lstmap.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_lstnew.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_memalloc.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_memccpy.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_memchr.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_memcmp.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_memcpy.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_memdel.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_memmove.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_memset.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_mmap.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_new_tout.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_octflag.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_params.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_presflags.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_print_bigs.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_print_c.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_print_id.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_print_o.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_print_p.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_print_s.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_print_x_u.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_printf.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_printf.h">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_putchar.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_putchar_fd.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_putendl.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_putendl_fd.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_putnbr.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_putnbr_fd.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_putstr.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_putstr_fd.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_sqrt.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_strcat.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_strchr.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_strclr.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_strcmp.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_strcpy.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_strdel.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_strdup.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_strequ.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_striter.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_striteri.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_strjoin.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_strlcat.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_strlen.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_strmap.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_strmapi.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_strncat.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_strncmp.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_strncpy.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_strnequ.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_strnew.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_strnstr.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_strrchr.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_strsplit.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_strstr.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_strsub.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_strtrim.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_swap.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_tolower.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/ft_toupper.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/get_next_line.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/get_next_line.h">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/libft/libft.h">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/main.c">
+			<Option target="diplom"/>
+		</Unit>
+		<Unit filename="/home/echufy/diplom/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

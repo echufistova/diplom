@@ -21,28 +21,29 @@ int		get_cood(t_farm *farm, char **line, int n)
 	dopline = *line;
 	while (**line != ' ' && **line != '\0')
 	{
-		if (!ft_isdigit((**line)))
+		if (!ft_isdigit(**line) && **line != '.')
 			return (write_error("INCORRECT INPUT. ERROR"));
 		++(*line);
 	}
 	if (n == 0)
 	{
 		ft_printf("HELLO\n");
-		farm->init->coord.x = ft_atoi(dopline);
+		farm->init->charges.midd_charge = ft_atoi(dopline);
+        ft_printf("midd_charge: %d\n", farm->init->charges.midd_charge);
 		if (!get_cood(farm, line, 1))
 			return (0);
 	}
 	else if (n == 1)
 	{
-		farm->init->coord.y = ft_atoi(dopline);
-		ft_printf("coor y: %d\n", farm->init->coord.y);
+		farm->init->charges.fast_charge = ft_atoi(dopline);
+		ft_printf("fast_charge: %d\n", farm->init->charges.fast_charge);
 		if (!get_cood(farm, line, 2))
 			return (0);
 	}
 	else if (n == 2)
 	{
-		farm->init->coord.z = ft_atoi(dopline);
-		ft_printf("coor y: %d\n", farm->init->coord.z);
+		farm->init->distance_to_next_station = strtod(dopline, NULL);
+		printf("distance: %f\n", farm->init->distance_to_next_station);
 	}
 	return (1);
 }

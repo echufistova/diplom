@@ -1,0 +1,3 @@
+/home/echufy/diplom/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/echufy/diplom/cmake-build-debug/CMakeFiles/diplom.dir
+/home/echufy/diplom/cmake-build-debug/CMakeFiles/edit_cache.dir

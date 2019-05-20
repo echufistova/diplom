@@ -21,14 +21,20 @@ typedef struct			    s_point
 {
 	int x;
 	int y;
-	int z;
 }						    t_point;
+
+typedef struct			    s_charge_speed
+{
+    int midd_charge;
+    int fast_charge;
+}						    t_charge_speed;
 
 typedef struct			    s_charge_st
 {
 	int				    	id;
 	char			    	*name;
-	t_point				    coord;
+	t_charge_speed		    charges;
+    float                  distance_to_next_station;
 	int				    	*links;
 	int				    	links_amount;
 	int					    flag;
@@ -38,7 +44,8 @@ typedef struct			    s_list_charges
 {
 	int					    id;
 	char				    *name;
-	t_point				    coord;
+    t_charge_speed		    charges;
+    float                  distance_to_next_station;
 	int					    *links;
 	int					    links_amount;
 	int					    size;

@@ -42,22 +42,6 @@ int		is_valid_map(t_farm farm)
 	return (1);
 }
 
-int		is_coord(t_farm farm, t_list_charges *room)
-{
-	t_list_charges *dop2;
-
-	dop2 = farm.dop;
-	while (dop2->next)
-	{
-		if (dop2->coord.x == room->coord.x &&
-				dop2->coord.y == room->coord.y)
-			return (write_error("THE ROOM WITH THE SAME COORD "
-			"IS PRESENT OR THERE ARE PROBLEMS WITH INPUT. ERROR"));
-		dop2 = dop2->next;
-	}
-	return (1);
-}
-
 int		mb_find_answer(t_farm farm, t_list_charges *dop2, t_list_charges **dop)
 {
 	if (dop2->id == farm.end_room_id)
