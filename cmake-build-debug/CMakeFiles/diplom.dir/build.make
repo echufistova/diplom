@@ -1136,18 +1136,18 @@ CMakeFiles/diplom.dir/ft_adds.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/diplom.dir/ft_adds.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/echufy/diplom/ft_adds.c -o CMakeFiles/diplom.dir/ft_adds.c.s
 
-CMakeFiles/diplom.dir/ft_ants.c.o: CMakeFiles/diplom.dir/flags.make
-CMakeFiles/diplom.dir/ft_ants.c.o: ../ft_ants.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/echufy/diplom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/diplom.dir/ft_ants.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/diplom.dir/ft_ants.c.o   -c /home/echufy/diplom/ft_ants.c
+CMakeFiles/diplom.dir/ft_cars.c.o: CMakeFiles/diplom.dir/flags.make
+CMakeFiles/diplom.dir/ft_cars.c.o: ../ft_cars.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/echufy/diplom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/diplom.dir/ft_cars.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/diplom.dir/ft_cars.c.o   -c /home/echufy/diplom/ft_cars.c
 
-CMakeFiles/diplom.dir/ft_ants.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/diplom.dir/ft_ants.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/echufy/diplom/ft_ants.c > CMakeFiles/diplom.dir/ft_ants.c.i
+CMakeFiles/diplom.dir/ft_cars.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/diplom.dir/ft_cars.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/echufy/diplom/ft_cars.c > CMakeFiles/diplom.dir/ft_cars.c.i
 
-CMakeFiles/diplom.dir/ft_ants.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/diplom.dir/ft_ants.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/echufy/diplom/ft_ants.c -o CMakeFiles/diplom.dir/ft_ants.c.s
+CMakeFiles/diplom.dir/ft_cars.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/diplom.dir/ft_cars.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/echufy/diplom/ft_cars.c -o CMakeFiles/diplom.dir/ft_cars.c.s
 
 CMakeFiles/diplom.dir/ft_bonuses.c.o: CMakeFiles/diplom.dir/flags.make
 CMakeFiles/diplom.dir/ft_bonuses.c.o: ../ft_bonuses.c
@@ -1188,18 +1188,18 @@ CMakeFiles/diplom.dir/ft_is.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/diplom.dir/ft_is.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/echufy/diplom/ft_is.c -o CMakeFiles/diplom.dir/ft_is.c.s
 
-CMakeFiles/diplom.dir/ft_list_room.c.o: CMakeFiles/diplom.dir/flags.make
-CMakeFiles/diplom.dir/ft_list_room.c.o: ../ft_list_room.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/echufy/diplom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building C object CMakeFiles/diplom.dir/ft_list_room.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/diplom.dir/ft_list_room.c.o   -c /home/echufy/diplom/ft_list_room.c
+CMakeFiles/diplom.dir/ft_list_station.c.o: CMakeFiles/diplom.dir/flags.make
+CMakeFiles/diplom.dir/ft_list_station.c.o: ../ft_list_station.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/echufy/diplom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building C object CMakeFiles/diplom.dir/ft_list_station.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/diplom.dir/ft_list_station.c.o   -c /home/echufy/diplom/ft_list_station.c
 
-CMakeFiles/diplom.dir/ft_list_room.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/diplom.dir/ft_list_room.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/echufy/diplom/ft_list_room.c > CMakeFiles/diplom.dir/ft_list_room.c.i
+CMakeFiles/diplom.dir/ft_list_station.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/diplom.dir/ft_list_station.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/echufy/diplom/ft_list_station.c > CMakeFiles/diplom.dir/ft_list_station.c.i
 
-CMakeFiles/diplom.dir/ft_list_room.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/diplom.dir/ft_list_room.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/echufy/diplom/ft_list_room.c -o CMakeFiles/diplom.dir/ft_list_room.c.s
+CMakeFiles/diplom.dir/ft_list_station.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/diplom.dir/ft_list_station.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/echufy/diplom/ft_list_station.c -o CMakeFiles/diplom.dir/ft_list_station.c.s
 
 CMakeFiles/diplom.dir/ft_ways.c.o: CMakeFiles/diplom.dir/flags.make
 CMakeFiles/diplom.dir/ft_ways.c.o: ../ft_ways.c
@@ -1312,11 +1312,11 @@ diplom_OBJECTS = \
 "CMakeFiles/diplom.dir/libft/ft_toupper.c.o" \
 "CMakeFiles/diplom.dir/libft/get_next_line.c.o" \
 "CMakeFiles/diplom.dir/ft_adds.c.o" \
-"CMakeFiles/diplom.dir/ft_ants.c.o" \
+"CMakeFiles/diplom.dir/ft_cars.c.o" \
 "CMakeFiles/diplom.dir/ft_bonuses.c.o" \
 "CMakeFiles/diplom.dir/ft_get.c.o" \
 "CMakeFiles/diplom.dir/ft_is.c.o" \
-"CMakeFiles/diplom.dir/ft_list_room.c.o" \
+"CMakeFiles/diplom.dir/ft_list_station.c.o" \
 "CMakeFiles/diplom.dir/ft_ways.c.o" \
 "CMakeFiles/diplom.dir/main.c.o"
 
@@ -1406,11 +1406,11 @@ diplom: CMakeFiles/diplom.dir/libft/ft_tolower.c.o
 diplom: CMakeFiles/diplom.dir/libft/ft_toupper.c.o
 diplom: CMakeFiles/diplom.dir/libft/get_next_line.c.o
 diplom: CMakeFiles/diplom.dir/ft_adds.c.o
-diplom: CMakeFiles/diplom.dir/ft_ants.c.o
+diplom: CMakeFiles/diplom.dir/ft_cars.c.o
 diplom: CMakeFiles/diplom.dir/ft_bonuses.c.o
 diplom: CMakeFiles/diplom.dir/ft_get.c.o
 diplom: CMakeFiles/diplom.dir/ft_is.c.o
-diplom: CMakeFiles/diplom.dir/ft_list_room.c.o
+diplom: CMakeFiles/diplom.dir/ft_list_station.c.o
 diplom: CMakeFiles/diplom.dir/ft_ways.c.o
 diplom: CMakeFiles/diplom.dir/main.c.o
 diplom: CMakeFiles/diplom.dir/build.make

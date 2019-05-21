@@ -18,33 +18,33 @@ void	add_link(t_map *map, char *line, int i)
 	t_station	dop_rm;
 
 	j = 0;
-	if (map->rooms[i].links_amount > 0)
+	if (map->station[i].links_amount > 0)
 	{
 		dop_rm.name = NULL;
 		dop_rm.flag = 0;
-		dop_rm.links_amount = map->rooms[i].links_amount;
-		dop_rm.links = (int*)malloc(sizeof(int) * map->rooms[i].links_amount);
+		dop_rm.links_amount = map->station[i].links_amount;
+		dop_rm.links = (int*)malloc(sizeof(int) * map->station[i].links_amount);
 		j = -1;
-		while (++j < map->rooms[i].links_amount)
-			dop_rm.links[j] = map->rooms[i].links[j];
-		free(map->rooms[i].links);
-		map->rooms[i].links = (int*)malloc(sizeof(int) *
-				(map->rooms[i].links_amount + 1));
+		while (++j < map->station[i].links_amount)
+			dop_rm.links[j] = map->station[i].links[j];
+		free(map->station[i].links);
+		map->station[i].links = (int*)malloc(sizeof(int) *
+				(map->station[i].links_amount + 1));
 		j = -1;
-		while (++j < map->rooms[i].links_amount)
-			map->rooms[i].links[j] = dop_rm.links[j];
+		while (++j < map->station[i].links_amount)
+			map->station[i].links[j] = dop_rm.links[j];
 		free(dop_rm.links);
 	}
 	else
-		map->rooms[i].links = (int*)malloc(sizeof(int));
-	map->rooms[i].links[j] = is_room(*map, line);
-	map->rooms[i].links_amount++;
+		map->station[i].links = (int*)malloc(sizeof(int));
+	map->station[i].links[j] = is_car(*map, line);
+	map->station[i].links_amount++;
 }
 
 int		find_link_dop(t_map map, char *dop, char **name, t_point ij)
 {
-	while (++ij.y < map.rooms[ij.x].links_amount)
-		if (map.rooms[ij.x].links[ij.y] == is_room(map, dop))
+	while (++ij.y < map.station[ij.x].links_amount)
+		if (map.station[ij.x].links[ij.y] == is_car(map, dop))
 		{
 			ft_strdel(name);
 			return (0);
@@ -61,8 +61,8 @@ int		find_link(t_map *map, char **line, int k)
 	ij.y = -1;
 	dop = ft_strchr(*line, '-');
 	name = ft_strsub(*line, 0, dop - *line);
-	ij.x = is_room(*map, name);
-	if (ij.x > -1 && is_room(*map, ++dop) > -1 && ij.x != is_room(*map, dop))
+	ij.x = is_car(*map, name);
+	if (ij.x > -1 && is_car(*map, ++dop) > -1 && ij.x != is_car(*map, dop))
 	{
 		if (!find_link_dop(*map, dop, &name, ij))
 			return (0);
@@ -80,16 +80,16 @@ int		find_link(t_map *map, char **line, int k)
 	return (0);
 }
 
-int		is_room(t_map map, char *name)
+int		is_car(t_map map, char *name)
 {
 	int i;
 
 	i = 0;
 	if (name)
 	{
-		while (i < map.room_amount)
+		while (i < map.car_amount)
 		{
-			if (ft_strcmp(map.rooms[i].name, name) == 0)
+			if (ft_strcmp(map.station[i].name, name) == 0)
 				return (i);
 			i++;
 		}
@@ -97,24 +97,24 @@ int		is_room(t_map map, char *name)
 	return (-1);
 }
 
-void	make_room(t_map *map)
+void	make_stations(t_map *map)
 {
 	int			    i;
 	t_list_stations	*dop2;
 
 	i = 0;
-	map->rooms = (t_station*)malloc(sizeof(t_station) * map->room_amount);
+	map->station = (t_station*)malloc(sizeof(t_station) * map->car_amount);
 	dop2 = map->dop;
 	map->dop->size = ft_list_size(map->dop);
 	while (dop2->next)
 	{
-		map->rooms[i].id = dop2->id;
-		map->rooms[i].name = ft_strdup(dop2->name);
-		map->rooms[i].charges.midd_charge = dop2->charges.midd_charge;
-		map->rooms[i].charges.fast_charge = dop2->charges.fast_charge;
-		map->rooms[i].distance_to_next_station = dop2->distance_to_next_station;
-		map->rooms[i].links_amount = 0;
-		map->rooms[i].links = NULL;
+		map->station[i].id = dop2->id;
+		map->station[i].name = ft_strdup(dop2->name);
+		map->station[i].charges.midd_charge = dop2->charges.midd_charge;
+		map->station[i].charges.fast_charge = dop2->charges.fast_charge;
+		map->station[i].distance_to_next_station = dop2->distance_to_next_station;
+		map->station[i].links_amount = 0;
+		map->station[i].links = NULL;
 		dop2 = dop2->next;
 		i++;
 	}

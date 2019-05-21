@@ -97,7 +97,7 @@ add_executable(diplom
         ft_bonuses.c
         ft_get.c
         ft_is.c
-        ft_list_room.c
+        ft_list_station.c
         ft_ways.c
         lem_in.h
         main.c)

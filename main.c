@@ -23,10 +23,10 @@ void	init(t_map *map, char **av)
         map->car = tesla_model_s;
     ft_printf("The car you have choosen is %s.\n", map->car.name);
     map->flag = 0;
-    map->room_amount = 0;
+    map->car_amount = 0;
     map->ways_amount = 0;
-    map->start_room_id = -1;
-    map->end_room_id = -1;
+    map->start_station_id = -1;
+    map->end_station_id = -1;
     map->init = (t_list_stations*)malloc(sizeof(t_list_stations));
     map->init->next = NULL;
     map->init->prev = NULL;
@@ -42,10 +42,11 @@ int		work(t_map *map)
 	{
 		ft_printf("\n");
 		map->ways = (t_list_stations**)malloc(sizeof(t_list_stations*) *
-				map->rooms[map->end_room_id].links_amount);
+				map->station[map->end_station_id].links_amount);
 		find_ways(map, 0);
 		cars = create_cars(map->cars_amount);
-		map->lines = move_cars(*map, cars);
+		print_ways(*map);
+		move_cars(*map, cars);
 		free(cars);
 		return (1);
 	}
@@ -83,9 +84,9 @@ int		not_comment_but_links(t_map *map, char **line)
 	{
 		if (map->flag == 0)
 		{
-			if (map->start_room_id == -1 || map->end_room_id == -1)
+			if (map->start_station_id == -1 || map->end_station_id == -1)
 				return (write_error("THERE IS NO START OR END ROOM. ERROR"));
-			make_room(map);
+			make_stations(map);
 			map->flag = 1;
 		}
 		if (!find_link(map, line, 0))

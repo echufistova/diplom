@@ -150,33 +150,6 @@ ft_adds.c.s:
 	$(MAKE) -f CMakeFiles/diplom.dir/build.make CMakeFiles/diplom.dir/ft_adds.c.s
 .PHONY : ft_adds.c.s
 
-ft_ants.o: ft_ants.c.o
-
-.PHONY : ft_ants.o
-
-# target to build an object file
-ft_ants.c.o:
-	$(MAKE) -f CMakeFiles/diplom.dir/build.make CMakeFiles/diplom.dir/ft_ants.c.o
-.PHONY : ft_ants.c.o
-
-ft_ants.i: ft_ants.c.i
-
-.PHONY : ft_ants.i
-
-# target to preprocess a source file
-ft_ants.c.i:
-	$(MAKE) -f CMakeFiles/diplom.dir/build.make CMakeFiles/diplom.dir/ft_ants.c.i
-.PHONY : ft_ants.c.i
-
-ft_ants.s: ft_ants.c.s
-
-.PHONY : ft_ants.s
-
-# target to generate assembly for a file
-ft_ants.c.s:
-	$(MAKE) -f CMakeFiles/diplom.dir/build.make CMakeFiles/diplom.dir/ft_ants.c.s
-.PHONY : ft_ants.c.s
-
 ft_bonuses.o: ft_bonuses.c.o
 
 .PHONY : ft_bonuses.o
@@ -203,6 +176,33 @@ ft_bonuses.s: ft_bonuses.c.s
 ft_bonuses.c.s:
 	$(MAKE) -f CMakeFiles/diplom.dir/build.make CMakeFiles/diplom.dir/ft_bonuses.c.s
 .PHONY : ft_bonuses.c.s
+
+ft_cars.o: ft_cars.c.o
+
+.PHONY : ft_cars.o
+
+# target to build an object file
+ft_cars.c.o:
+	$(MAKE) -f CMakeFiles/diplom.dir/build.make CMakeFiles/diplom.dir/ft_cars.c.o
+.PHONY : ft_cars.c.o
+
+ft_cars.i: ft_cars.c.i
+
+.PHONY : ft_cars.i
+
+# target to preprocess a source file
+ft_cars.c.i:
+	$(MAKE) -f CMakeFiles/diplom.dir/build.make CMakeFiles/diplom.dir/ft_cars.c.i
+.PHONY : ft_cars.c.i
+
+ft_cars.s: ft_cars.c.s
+
+.PHONY : ft_cars.s
+
+# target to generate assembly for a file
+ft_cars.c.s:
+	$(MAKE) -f CMakeFiles/diplom.dir/build.make CMakeFiles/diplom.dir/ft_cars.c.s
+.PHONY : ft_cars.c.s
 
 ft_get.o: ft_get.c.o
 
@@ -258,32 +258,32 @@ ft_is.c.s:
 	$(MAKE) -f CMakeFiles/diplom.dir/build.make CMakeFiles/diplom.dir/ft_is.c.s
 .PHONY : ft_is.c.s
 
-ft_list_room.o: ft_list_room.c.o
+ft_list_station.o: ft_list_station.c.o
 
-.PHONY : ft_list_room.o
+.PHONY : ft_list_station.o
 
 # target to build an object file
-ft_list_room.c.o:
-	$(MAKE) -f CMakeFiles/diplom.dir/build.make CMakeFiles/diplom.dir/ft_list_room.c.o
-.PHONY : ft_list_room.c.o
+ft_list_station.c.o:
+	$(MAKE) -f CMakeFiles/diplom.dir/build.make CMakeFiles/diplom.dir/ft_list_station.c.o
+.PHONY : ft_list_station.c.o
 
-ft_list_room.i: ft_list_room.c.i
+ft_list_station.i: ft_list_station.c.i
 
-.PHONY : ft_list_room.i
+.PHONY : ft_list_station.i
 
 # target to preprocess a source file
-ft_list_room.c.i:
-	$(MAKE) -f CMakeFiles/diplom.dir/build.make CMakeFiles/diplom.dir/ft_list_room.c.i
-.PHONY : ft_list_room.c.i
+ft_list_station.c.i:
+	$(MAKE) -f CMakeFiles/diplom.dir/build.make CMakeFiles/diplom.dir/ft_list_station.c.i
+.PHONY : ft_list_station.c.i
 
-ft_list_room.s: ft_list_room.c.s
+ft_list_station.s: ft_list_station.c.s
 
-.PHONY : ft_list_room.s
+.PHONY : ft_list_station.s
 
 # target to generate assembly for a file
-ft_list_room.c.s:
-	$(MAKE) -f CMakeFiles/diplom.dir/build.make CMakeFiles/diplom.dir/ft_list_room.c.s
-.PHONY : ft_list_room.c.s
+ft_list_station.c.s:
+	$(MAKE) -f CMakeFiles/diplom.dir/build.make CMakeFiles/diplom.dir/ft_list_station.c.s
+.PHONY : ft_list_station.c.s
 
 ft_ways.o: ft_ways.c.o
 
@@ -2565,21 +2565,21 @@ help:
 	@echo "... ft_adds.o"
 	@echo "... ft_adds.i"
 	@echo "... ft_adds.s"
-	@echo "... ft_ants.o"
-	@echo "... ft_ants.i"
-	@echo "... ft_ants.s"
 	@echo "... ft_bonuses.o"
 	@echo "... ft_bonuses.i"
 	@echo "... ft_bonuses.s"
+	@echo "... ft_cars.o"
+	@echo "... ft_cars.i"
+	@echo "... ft_cars.s"
 	@echo "... ft_get.o"
 	@echo "... ft_get.i"
 	@echo "... ft_get.s"
 	@echo "... ft_is.o"
 	@echo "... ft_is.i"
 	@echo "... ft_is.s"
-	@echo "... ft_list_room.o"
-	@echo "... ft_list_room.i"
-	@echo "... ft_list_room.s"
+	@echo "... ft_list_station.o"
+	@echo "... ft_list_station.i"
+	@echo "... ft_list_station.s"
 	@echo "... ft_ways.o"
 	@echo "... ft_ways.i"
 	@echo "... ft_ways.s"

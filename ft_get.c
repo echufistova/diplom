@@ -67,27 +67,27 @@ int		get_info(t_map *map, char *line, int *i)
 			ft_strdel(&dop2);
 			return (0);
 		}
-		map->init->id = map->room_amount;
+		map->init->id = map->car_amount;
 		map->init->name = ft_strdup(dop2);
 		ft_strdel(&dop2);
         if (!get_cood(map, &dop, 0))
             return (0);
-		room_init(map);
+		station_init(map);
 	}
 	return (1);
 }
 
 int		get_start_end(t_map *map, char **line)
 {
-	if (ft_strcmp(*line, "##start") == 0 && map->start_room_id == -1)
+	if (ft_strcmp(*line, "##start") == 0 && map->start_station_id == -1)
 	{
-		map->start_room_id = map->room_amount;
+		map->start_station_id = map->car_amount;
 		ft_strdel(line);
 		return (1);
 	}
-	else if (ft_strcmp(*line, "##end") == 0 && map->end_room_id == -1)
+	else if (ft_strcmp(*line, "##end") == 0 && map->end_station_id == -1)
 	{
-		map->end_room_id = map->room_amount;
+		map->end_station_id = map->car_amount;
 		ft_strdel(line);
 		return (1);
 	}
@@ -102,12 +102,12 @@ int		get_start_end(t_map *map, char **line)
 		return (0);
 }
 
-void	room_init(t_map *map)
+void	station_init(t_map *map)
 {
 	map->init->links_amount = 0;
 	map->init->next = (t_list_stations*)malloc(sizeof(t_list_stations));
 	map->init = map->init->next;
 	map->init->next = NULL;
 	map->init->prev = NULL;
-	map->room_amount++;
+	map->car_amount++;
 }

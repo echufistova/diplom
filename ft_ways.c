@@ -25,21 +25,21 @@ void	get_way(t_map *map, t_list_stations *way, int flag)
 	t_list_stations *new;
 
 	bzero_ways(map);
-	map->ways[map->ways_amount] = ft_list_room_new(map->rooms[
-			map->start_room_id]);
+	map->ways[map->ways_amount] = ft_list_station_new(map->station[
+                                                              map->start_station_id]);
 	dop = map->ways[map->ways_amount];
 	rm = way->prev;
-	while (rm->id != map->end_room_id)
+	while (rm->id != map->end_station_id)
 	{
-		map->ways[map->ways_amount]->next = ft_list_room_new(map->rooms
-				[rm->id]);
+		map->ways[map->ways_amount]->next = ft_list_station_new(map->station
+                                                                [rm->id]);
 		map->ways[map->ways_amount] = map->ways[map->ways_amount]->next;
-		map->rooms[rm->id].flag = 2;
+		map->station[rm->id].flag = 2;
 		rm = rm->prev;
 	}
 	new = rm;
-	map->ways[map->ways_amount]->next = ft_list_room_new(map->rooms[
-			rm->id]);
+	map->ways[map->ways_amount]->next = ft_list_station_new(map->station[
+                                                                    rm->id]);
 	map->ways[map->ways_amount] = dop;
 	map->ways[map->ways_amount]->size = ft_list_size(map->ways[
 			map->ways_amount]) - 1;
@@ -50,23 +50,23 @@ void	get_way(t_map *map, t_list_stations *way, int flag)
 int		find_ways_dop(t_map *map, t_list_stations **way,
 						 t_list_stations *dop2, t_point i)
 {
-	if ((*way)->id != map->end_room_id && (*way)->id != -1)
-		map->rooms[(*way)->id].flag = 1;
+	if ((*way)->id != map->end_station_id && (*way)->id != -1)
+		map->station[(*way)->id].flag = 1;
 	if ((*way)->links_amount == 1 && (*way)->links[0] ==
-						map->start_room_id)
+						map->start_station_id)
 	{
-		(*way)->next = ft_list_room_new(map->rooms[dop2->links[i.x]]);
+		(*way)->next = ft_list_station_new(map->station[dop2->links[i.x]]);
 		(*way) = (*way)->next;
 		(*way)->prev = dop2;
 		get_way(map, (*way), 1);
 		return (0);
 	}
-	if (dop2->links[i.x] != map->end_room_id)
+	if (dop2->links[i.x] != map->end_station_id)
 	{
-		(*way)->next = ft_list_room_new(map->rooms[dop2->links[i.x]]);
+		(*way)->next = ft_list_station_new(map->station[dop2->links[i.x]]);
 		(*way) = (*way)->next;
 		(*way)->prev = dop2;
-		if ((*way)->id == map->start_room_id)
+		if ((*way)->id == map->start_station_id)
 		{
 			get_way(map, (*way), i.y);
 			return (0);
@@ -82,7 +82,7 @@ void	find_ways(t_map *map, int flag)
 	t_list_stations	*dop2;
 	t_list_stations	*dop;
 
-	way = ft_list_room_new(map->rooms[map->end_room_id]);
+	way = ft_list_station_new(map->station[map->end_station_id]);
 	dop = way;
 	dop2 = way;
 	i.y = flag;
@@ -93,7 +93,7 @@ void	find_ways(t_map *map, int flag)
 		i.x = -1;
 		while (++i.x < dop2->links_amount)
 		{
-			if (map->rooms[dop2->links[i.x]].flag != 1 && map->rooms[
+			if (map->station[dop2->links[i.x]].flag != 1 && map->station[
 		dop2->links[i.x]].flag != 2 && !find_ways_dop(map, &way, dop2, i))
 				return ;
 		}

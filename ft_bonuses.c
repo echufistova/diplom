@@ -25,10 +25,10 @@ void	bzero_ways(t_map *farm)
 	int i;
 
 	i = 0;
-	while (i < farm->room_amount)
+	while (i < farm->car_amount)
 	{
-		if (farm->rooms[i].flag != 2)
-			farm->rooms[i].flag = 0;
+		if (farm->station[i].flag != 2)
+			farm->station[i].flag = 0;
 		i++;
 	}
 }

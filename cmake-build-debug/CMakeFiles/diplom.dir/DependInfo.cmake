@@ -5,11 +5,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/home/echufy/diplom/ft_adds.c" "/home/echufy/diplom/cmake-build-debug/CMakeFiles/diplom.dir/ft_adds.c.o"
-  "/home/echufy/diplom/ft_ants.c" "/home/echufy/diplom/cmake-build-debug/CMakeFiles/diplom.dir/ft_ants.c.o"
   "/home/echufy/diplom/ft_bonuses.c" "/home/echufy/diplom/cmake-build-debug/CMakeFiles/diplom.dir/ft_bonuses.c.o"
+  "/home/echufy/diplom/ft_cars.c" "/home/echufy/diplom/cmake-build-debug/CMakeFiles/diplom.dir/ft_cars.c.o"
   "/home/echufy/diplom/ft_get.c" "/home/echufy/diplom/cmake-build-debug/CMakeFiles/diplom.dir/ft_get.c.o"
   "/home/echufy/diplom/ft_is.c" "/home/echufy/diplom/cmake-build-debug/CMakeFiles/diplom.dir/ft_is.c.o"
-  "/home/echufy/diplom/ft_list_room.c" "/home/echufy/diplom/cmake-build-debug/CMakeFiles/diplom.dir/ft_list_room.c.o"
+  "/home/echufy/diplom/ft_list_station.c" "/home/echufy/diplom/cmake-build-debug/CMakeFiles/diplom.dir/ft_list_station.c.o"
   "/home/echufy/diplom/ft_ways.c" "/home/echufy/diplom/cmake-build-debug/CMakeFiles/diplom.dir/ft_ways.c.o"
   "/home/echufy/diplom/libft/ft_atoi.c" "/home/echufy/diplom/cmake-build-debug/CMakeFiles/diplom.dir/libft/ft_atoi.c.o"
   "/home/echufy/diplom/libft/ft_bzero.c" "/home/echufy/diplom/cmake-build-debug/CMakeFiles/diplom.dir/libft/ft_bzero.c.o"

@@ -33,18 +33,18 @@ int		is_valid_map(t_map map)
 {
 	if (map.cars_amount < 1 || map.cars_amount > 2147483647)
 		return (write_error("NOT GOOD AMOUNT OF ANTS. ERROR"));
-	if (map.start_room_id == -1)
+	if (map.start_station_id == -1)
 		return (write_error("THERE IS NO START ROOM. ERROR"));
-	if (map.end_room_id == -1)
+	if (map.end_station_id == -1)
 		return (write_error("THERE IS NO END ROOM. ERROR"));
-	if (map.room_amount < 2)
+	if (map.car_amount < 2)
 		return (write_error("NOT ENOUGH ROOMS. ERROR"));
 	return (1);
 }
 
 int		mb_find_answer(t_map map, t_list_stations *dop2, t_list_stations **dop)
 {
-	if (dop2->id == map.end_room_id)
+	if (dop2->id == map.end_station_id)
 	{
 		free_list(dop);
 		return (1);
@@ -55,13 +55,13 @@ int		mb_find_answer(t_map map, t_list_stations *dop2, t_list_stations **dop)
 int		is_answer(t_map map)
 {
 	int			j;
-	t_list_stations	*room_list;
+	t_list_stations	*station_list;
 	t_list_stations	*dop2;
 	t_list_stations	*dop;
 
-	room_list = ft_list_room_new(map.rooms[map.start_room_id]);
-	dop = room_list;
-	dop2 = room_list;
+	station_list = ft_list_station_new(map.station[map.start_station_id]);
+	dop = station_list;
+	dop2 = station_list;
 	while (dop2)
 	{
 		if (mb_find_answer(map, dop2, &dop))
@@ -69,10 +69,10 @@ int		is_answer(t_map map)
 		j = -1;
 		while (++j < dop2->links_amount)
 		{
-			if (!ft_list_room_find(dop, dop2->links[j]))
+			if (!ft_list_station_find(dop, dop2->links[j]))
 			{
-				room_list->next = ft_list_room_new(map.rooms[dop2->links[j]]);
-				room_list = room_list->next;
+				station_list->next = ft_list_station_new(map.station[dop2->links[j]]);
+				station_list = station_list->next;
 			}
 		}
 		dop2 = dop2->next;

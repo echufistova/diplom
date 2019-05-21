@@ -7,17 +7,17 @@ CMakeFiles/diplom.dir/ft_adds.c.o: ../libft/ft_printf.h
 CMakeFiles/diplom.dir/ft_adds.c.o: ../libft/get_next_line.h
 CMakeFiles/diplom.dir/ft_adds.c.o: ../libft/libft.h
 
-CMakeFiles/diplom.dir/ft_ants.c.o: ../ft_ants.c
-CMakeFiles/diplom.dir/ft_ants.c.o: ../lem_in.h
-CMakeFiles/diplom.dir/ft_ants.c.o: ../libft/ft_printf.h
-CMakeFiles/diplom.dir/ft_ants.c.o: ../libft/get_next_line.h
-CMakeFiles/diplom.dir/ft_ants.c.o: ../libft/libft.h
-
 CMakeFiles/diplom.dir/ft_bonuses.c.o: ../ft_bonuses.c
 CMakeFiles/diplom.dir/ft_bonuses.c.o: ../lem_in.h
 CMakeFiles/diplom.dir/ft_bonuses.c.o: ../libft/ft_printf.h
 CMakeFiles/diplom.dir/ft_bonuses.c.o: ../libft/get_next_line.h
 CMakeFiles/diplom.dir/ft_bonuses.c.o: ../libft/libft.h
+
+CMakeFiles/diplom.dir/ft_cars.c.o: ../ft_cars.c
+CMakeFiles/diplom.dir/ft_cars.c.o: ../lem_in.h
+CMakeFiles/diplom.dir/ft_cars.c.o: ../libft/ft_printf.h
+CMakeFiles/diplom.dir/ft_cars.c.o: ../libft/get_next_line.h
+CMakeFiles/diplom.dir/ft_cars.c.o: ../libft/libft.h
 
 CMakeFiles/diplom.dir/ft_get.c.o: ../ft_get.c
 CMakeFiles/diplom.dir/ft_get.c.o: ../lem_in.h
@@ -31,11 +31,11 @@ CMakeFiles/diplom.dir/ft_is.c.o: ../libft/ft_printf.h
 CMakeFiles/diplom.dir/ft_is.c.o: ../libft/get_next_line.h
 CMakeFiles/diplom.dir/ft_is.c.o: ../libft/libft.h
 
-CMakeFiles/diplom.dir/ft_list_room.c.o: ../ft_list_room.c
-CMakeFiles/diplom.dir/ft_list_room.c.o: ../lem_in.h
-CMakeFiles/diplom.dir/ft_list_room.c.o: ../libft/ft_printf.h
-CMakeFiles/diplom.dir/ft_list_room.c.o: ../libft/get_next_line.h
-CMakeFiles/diplom.dir/ft_list_room.c.o: ../libft/libft.h
+CMakeFiles/diplom.dir/ft_list_station.c.o: ../ft_list_station.c
+CMakeFiles/diplom.dir/ft_list_station.c.o: ../lem_in.h
+CMakeFiles/diplom.dir/ft_list_station.c.o: ../libft/ft_printf.h
+CMakeFiles/diplom.dir/ft_list_station.c.o: ../libft/get_next_line.h
+CMakeFiles/diplom.dir/ft_list_station.c.o: ../libft/libft.h
 
 CMakeFiles/diplom.dir/ft_ways.c.o: ../ft_ways.c
 CMakeFiles/diplom.dir/ft_ways.c.o: ../lem_in.h

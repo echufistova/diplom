@@ -85,10 +85,10 @@
 		<Unit filename="/home/echufy/diplom/ft_adds.c">
 			<Option target="diplom"/>
 		</Unit>
-		<Unit filename="/home/echufy/diplom/ft_ants.c">
+		<Unit filename="/home/echufy/diplom/ft_bonuses.c">
 			<Option target="diplom"/>
 		</Unit>
-		<Unit filename="/home/echufy/diplom/ft_bonuses.c">
+		<Unit filename="/home/echufy/diplom/ft_cars.c">
 			<Option target="diplom"/>
 		</Unit>
 		<Unit filename="/home/echufy/diplom/ft_get.c">
@@ -97,7 +97,7 @@
 		<Unit filename="/home/echufy/diplom/ft_is.c">
 			<Option target="diplom"/>
 		</Unit>
-		<Unit filename="/home/echufy/diplom/ft_list_room.c">
+		<Unit filename="/home/echufy/diplom/ft_list_station.c">
 			<Option target="diplom"/>
 		</Unit>
 		<Unit filename="/home/echufy/diplom/ft_ways.c">

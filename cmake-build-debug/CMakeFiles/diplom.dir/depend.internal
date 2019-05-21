@@ -7,14 +7,14 @@ CMakeFiles/diplom.dir/ft_adds.c.o
  /home/echufy/diplom/libft/ft_printf.h
  /home/echufy/diplom/libft/get_next_line.h
  /home/echufy/diplom/libft/libft.h
-CMakeFiles/diplom.dir/ft_ants.c.o
- /home/echufy/diplom/ft_ants.c
+CMakeFiles/diplom.dir/ft_bonuses.c.o
+ /home/echufy/diplom/ft_bonuses.c
  /home/echufy/diplom/lem_in.h
  /home/echufy/diplom/libft/ft_printf.h
  /home/echufy/diplom/libft/get_next_line.h
  /home/echufy/diplom/libft/libft.h
-CMakeFiles/diplom.dir/ft_bonuses.c.o
- /home/echufy/diplom/ft_bonuses.c
+CMakeFiles/diplom.dir/ft_cars.c.o
+ /home/echufy/diplom/ft_cars.c
  /home/echufy/diplom/lem_in.h
  /home/echufy/diplom/libft/ft_printf.h
  /home/echufy/diplom/libft/get_next_line.h
@@ -31,8 +31,8 @@ CMakeFiles/diplom.dir/ft_is.c.o
  /home/echufy/diplom/libft/ft_printf.h
  /home/echufy/diplom/libft/get_next_line.h
  /home/echufy/diplom/libft/libft.h
-CMakeFiles/diplom.dir/ft_list_room.c.o
- /home/echufy/diplom/ft_list_room.c
+CMakeFiles/diplom.dir/ft_list_station.c.o
+ /home/echufy/diplom/ft_list_station.c
  /home/echufy/diplom/lem_in.h
  /home/echufy/diplom/libft/ft_printf.h
  /home/echufy/diplom/libft/get_next_line.h

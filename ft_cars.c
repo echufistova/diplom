@@ -76,9 +76,9 @@ int		from_start_to_end(t_map map, t_car *cars)
 	while (++i < map.cars_amount)
 	{
 		ft_printf("L%d-%s ", cars[i].number,
-				  map.rooms[map.start_room_id].name);
+				  map.station[map.start_station_id].name);
 		ft_printf("L%d-%s ", cars[i].number,
-				map.rooms[map.end_room_id].name);
+				map.station[map.end_station_id].name);
 	}
 	ft_printf("\n");
 	return (1);
@@ -87,28 +87,28 @@ int		from_start_to_end(t_map map, t_car *cars)
 int		move_cars(t_map map, t_car *cars)
 {
 	int j;
-	int counter;
-	int current_cars_number;
+    t_list_stations	*way;
 
-	counter = 0;
-	current_cars_number = 1;
-	j = -1;
-	while (++j < map.rooms[map.start_room_id].links_amount)
-		if (map.rooms[map.start_room_id].links[j] == map.end_room_id &&
+    j = -1;
+    way = map.ways[0];
+    cars[0].way_size = ft_list_size(way) - 1;
+	while (++j < map.station[map.start_station_id].links_amount)
+		if (map.station[map.start_station_id].links[j] == map.end_station_id &&
 				from_start_to_end(map, cars))
 			return (1);
-    ft_printf("L%d-%s\n", 1,
-              map.rooms[map.start_room_id].name);
-	while (current_cars_number <= map.cars_amount ||
-			!all_cars_got_end(cars, map.cars_amount))
+	while (1 <= cars[0].way_size)
 	{
-		if (current_cars_number <= map.cars_amount)
-			current_cars_number = get_cars(map, cars, current_cars_number);
-		print_cars_movings(cars, current_cars_number - 1);
-		counter++;
-		j = -1;
-		while (++j < current_cars_number - 1)
-			cars[j].currnet_index++;
+//        if (cars[0].mileage < map.km)
+//        {
+            cars[0].way = way;
+            cars[j].currnet_index++;
+            cars[0].way_size = ft_list_size(way) - 1;
+            ft_printf("L%d-%s\n", 1,
+                      way->name);
+            way = way->next;
+//            map.km += map.station
+//        }
 	}
-	return (counter);
+	return (1);
 }
+
