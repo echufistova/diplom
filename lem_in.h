@@ -45,11 +45,10 @@ typedef struct			    s_list_stations
 	int					    id;
 	char				    *name;
     t_charge_speed		    charges;
-    float                  distance_to_next_station;
+    float                   distance_to_next_station;
 	int					    *links;
 	int					    links_amount;
 	int					    size;
-	char				    *color;
 	struct s_list_stations	*prev;
 	struct s_list_stations	*next;
 }						    t_list_stations;
@@ -67,11 +66,13 @@ typedef struct		    	s_car
 	int				    	currnet_index;
 }					       	t_car;
 
-typedef struct		    	s_farm
+typedef struct		    	s_map
 {
-    int					    ants_amount;
+    int					    cars_amount;
     int					    room_amount;
     int					    ways_amount;
+    int                     km;
+    int                     mileage;
     int				    	flag;
     int				    	lines;
     int				    	start_room_id;
@@ -81,32 +82,28 @@ typedef struct		    	s_farm
     t_list_stations	    	**ways;
     t_station		    	*rooms;
     t_car                   car;
-}					    	t_farm;
+}					    	t_map;
 
-int					    	is_room(t_farm farm, char *name);
-int					    	is_answer(t_farm farm);
-int				    		is_valid_name(t_farm farm, const char *name);
-int				    		is_valid_map(t_farm farm);
-int				    		find_link(t_farm *farm, char **line, int k);
-void			    		add_link(t_farm *farm, char *line, int i);
+int					    	is_room(t_map map, char *name);
+int					    	is_answer(t_map map);
+int				    		is_valid_name(t_map map, const char *name);
+int				    		is_valid_map(t_map map);
+int				    		find_link(t_map *map, char **line, int k);
+void			    		add_link(t_map *map, char *line, int i);
 int				    		ft_list_room_find(t_list_stations *room_list, int id);
 int				    		ft_list_size(t_list_stations *room_list);
-int				    		get_start_end(t_farm *farm, char **line);
-int					    	get_info(t_farm *farm, char *line, int *i);
-void				    	get_way(t_farm *farm, t_list_stations *way, int flag);
-void			    		find_ways(t_farm *farm, int flag);
-void			    		print_ways(t_farm farm);
-void				    	bzero_ways(t_farm *farm);
-void			    		print_ants_movings(t_car *ants, int ants_amount);
-int				    		bonus_ways(t_farm farm, char **av);
-int				    		bonus_lines(t_farm farm, char **av);
-void				    	room_init(t_farm *farm);
-void			    		make_room(t_farm *farm);
+int				    		get_start_end(t_map *map, char **line);
+int					    	get_info(t_map *map, char *line, int *i);
+void				    	get_way(t_map *map, t_list_stations *way, int flag);
+void			    		find_ways(t_map *map, int flag);
+void				    	bzero_ways(t_map *farm);
+void			    		print_cars_movings(t_car *cars, int cars_amount);
+void				    	room_init(t_map *map);
+void			    		make_room(t_map *map);
 void			    		free_list(t_list_stations **dop);
-int				    		move_ants(t_farm farm, t_car *ants);
+int				    		move_cars(t_map map, t_car *cars);
 int				    		write_error(char *s);
-void			    		the_end(void);
-t_car			    		*create_ants(int ants_amount);
+t_car			    		*create_cars(int cars_amount);
 t_list_stations	    		*ft_list_room_new(t_station room);
 
 static const t_car nissan_leaf =

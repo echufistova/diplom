@@ -36,7 +36,6 @@ t_list_stations		*ft_list_room_new(t_station room)
 		res->links = NULL;
 	res->next = NULL;
 	res->prev = NULL;
-	res->color = NULL;
 	res->size = 1;
 	return (res);
 }
@@ -83,26 +82,24 @@ void			free_list(t_list_stations **dop)
 	}
 }
 
-void			print_ants_movings(t_car *ants, int ants_amount)
+void			print_cars_movings(t_car *cars, int cars_amount)
 {
 	int			    i;
 	int			    j;
     t_list_stations	*tmp_way;
 
 	i = -1;
-	while (++i < ants_amount)
+	while (++i < cars_amount)
 	{
-		if (ants[i].currnet_index > ants[i].way_size)
+		if (cars[i].currnet_index > cars[i].way_size)
 			continue;
-		tmp_way = ants[i].way;
+		tmp_way = cars[i].way;
 		j = -1;
-		while (++j < ants[i].currnet_index)
+		while (++j < cars[i].currnet_index)
 			tmp_way = tmp_way->next;
-		if (ants[i].currnet_index != 0)
+		if (cars[i].currnet_index != 0)
 		{
-			if (ants[i].way->color != NULL)
-				write(1, ants[i].way->color, 5);
-			ft_printf("L%d-%s ", ants[i].number, tmp_way->name);
+			ft_printf("L%d-%s ", cars[i].number, tmp_way->name);
 			write(1, "\e[0m", 4);
 		}
 	}

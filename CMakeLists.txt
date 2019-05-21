@@ -93,7 +93,7 @@ add_executable(diplom
         libft/get_next_line.h
         libft/libft.h
         ft_adds.c
-        ft_ants.c
+        ft_cars.c
         ft_bonuses.c
         ft_get.c
         ft_is.c
