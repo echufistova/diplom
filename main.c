@@ -22,9 +22,12 @@ void	init(t_map *map, char **av)
     else if (ft_atoi(av[1]) == 3)
         map->car = tesla_model_s;
     ft_printf("The car you have choosen is %s.\n", map->car.name);
+    ft_printf("The car you have choosen is %s.\n", map->car.name);
     map->flag = 0;
     map->car_amount = 0;
     map->ways_amount = 0;
+    map->km = 0;
+    map->mileage = 0;
     map->start_station_id = -1;
     map->end_station_id = -1;
     map->init = (t_list_stations*)malloc(sizeof(t_list_stations));
@@ -44,10 +47,8 @@ int		work(t_map *map)
 		map->ways = (t_list_stations**)malloc(sizeof(t_list_stations*) *
 				map->station[map->end_station_id].links_amount);
 		find_ways(map, 0);
-		cars = create_cars(map->cars_amount);
 		print_ways(*map);
-		move_cars(*map, cars);
-		free(cars);
+		move_cars(*map);
 		return (1);
 	}
 	return (write_error("ERROR"));

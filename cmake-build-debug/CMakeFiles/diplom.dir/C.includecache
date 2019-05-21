@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/echufy/diplom/ft_list_station.c
-lem_in.h
-/home/echufy/diplom/lem_in.h
-
 /home/echufy/diplom/lem_in.h
 libft/libft.h
 /home/echufy/diplom/libft/libft.h
@@ -69,4 +65,8 @@ ctype.h
 -
 stdint.h
 -
+
+/home/echufy/diplom/main.c
+lem_in.h
+/home/echufy/diplom/lem_in.h
 
