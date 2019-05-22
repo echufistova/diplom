@@ -39,7 +39,6 @@ int		move_cars(t_map *map)
         map->car.way_size = ft_list_size(way) - 1;
 	    printf("\ncar_mileage: %d - map.km: %d\n\n", map->car.mileage, map->km);
         ft_printf("we are here : %s\n", way->name);
-        printf("%s in %f km\n",  way->name, way->distance_to_next_station);
         if (map->car.way_size - 1 >= 1 && map->km + (int)way->next->distance_to_next_station < map->car.mileage)
         {
             map->car.way = way;

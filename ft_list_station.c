@@ -23,7 +23,10 @@ t_list_stations		*ft_list_station_new(t_station station)
 	res->id = station.id;
 	res->name = station.name;
 	res->links_amount = station.links_amount;
-	if (station.links_amount != 0)
+	res->charges.fast_charge = station.charges.fast_charge;
+	res->charges.midd_charge = station.charges.midd_charge;
+    res->distance_to_next_station = station.distance_to_next_station;
+    if (station.links_amount != 0)
 	{
 		res->links = (int *)malloc(sizeof(int) * station.links_amount);
 		while (i < station.links_amount)
