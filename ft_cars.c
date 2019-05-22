@@ -23,33 +23,41 @@ int		from_start_to_end(t_map map)
 
 int way_to_fast_charge(t_map *map, t_list_stations **way)
 {
+    int flag;
     t_list_stations *tmp;
     float dop_mileage;
     float dop_time;
 
+    flag = 0;
     tmp = (*way);
     dop_mileage = 0;
     dop_time = 0;
     while (tmp) {
+//        dop_mileage = map->km;
+//        dop_time = map->time;
         if (map->mileage + tmp->distance_to_next_station < map->car.mileage) {
             if (tmp->charges.fast_charge)
             {
                 (*way) = tmp;
+                flag = 1;
                 dop_mileage = map->km;
                 dop_time = map->time;
             }
             map->km += tmp->distance_to_next_station;
             map->mileage += tmp->distance_to_next_station;
         } else {
+            if (flag == 1)
+                tmp = (*way);
             map->mileage = 0;
-            map->km = dop_mileage + (*way)->distance_to_next_station;
-            map->time = dop_time;
-            map->time += ((*way)->charges.fast_charge == 1) ?
+            map->km = (flag == 1) ? dop_mileage + tmp->distance_to_next_station :
+                      map->km + tmp->distance_to_next_station;
+            map->time = (flag == 1) ? dop_time : map->time;
+            map->time += (tmp->charges.fast_charge == 1) ?
                     map->car.time_fast_charge : map->car.time_midd_charge;
-            printf("Заїхали на зарядну станцію %s, тому що проїхали вже %f кілометрів\n\n", (*way)->name, map->km);
-            tmp = (*way);
+            printf("Заїхали на зарядну станцію %s, тому що проїхали вже %f кілометрів\n\n",
+                   tmp->name, map->km - tmp->distance_to_next_station);
         }
-        map->time += (*way)->distance_to_next_station / (float)100;
+        map->time += tmp->distance_to_next_station / (float)100;
         tmp = tmp->next;
     }
     return (0);
