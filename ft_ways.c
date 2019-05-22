@@ -93,7 +93,6 @@ void	find_ways(t_map *map, int flag)
 		i.x = -1;
 		while (++i.x < dop2->links_amount)
 		{
-		    printf("flag: %d u %s\n ", map->station[dop2->links[i.x]].flag, map->station[dop2->links[i.x]].name);
 			if (map->station[dop2->links[i.x]].flag != 1 && map->station[
 		dop2->links[i.x]].flag != 2 && !find_ways_dop(map, &way, dop2, i))
 				return ;
@@ -110,18 +109,19 @@ void	print_ways(t_map map)
 	t_list_stations	*ways;
 
 	i = 0;
-	ft_printf("Amount of ways: %d\n", map.ways_amount);
+	ft_printf("Знайдена така кількість шляхів: %d\n", map.ways_amount);
 	while (i < map.ways_amount)
 	{
 		ways = map.ways[i];
-		ft_printf("%d) %d : ", i + 1, ways->size);
+		ft_printf("Кількість пунктів по дорозі: %d.\n%d) ", ways->size, i + 1);
 		while (ways)
 		{
-			ft_printf("%s -> ", ways->name);
+			ft_printf("%s ", ways->name);
 			if (ways->next)
 				ways = ways->next;
 			else
 				break ;
+            ft_printf("-> \n -> ");
 		}
 		ft_printf("\n");
 		i++;

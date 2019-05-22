@@ -21,8 +21,8 @@ void	init(t_map *map, char **av)
         map->car = bmw_i3;
     else if (ft_atoi(av[1]) == 3)
         map->car = tesla_model_s;
-    ft_printf("The car you have choosen is %s.\n", map->car.name);
-    ft_printf("The car you have choosen is %s.\n", map->car.name);
+    ft_printf("Ви обрали електромобіль %s.\n", map->car.name);
+    ft_printf("%s має %d кілометрів пробігу від одного заряду.\n", map->car.mileage);
     map->flag = 0;
     map->car_amount = 0;
     map->ways_amount = 0;
@@ -111,15 +111,14 @@ int		main(int ac, char **av)
 	{
 		if (ft_strlen(line) != 0)
 		{
-			write(1, line, ft_strlen(line));
-			write(1, "\n", 1);
+//			write(1, line, ft_strlen(line));
+//			write(1, "\n", 1);
 			if (ft_strchr(line, '#') && get_start_end(&map, &line))
 				continue;
 			else if (!not_comment_not_links(&map, &line, &i))
 				break ;
 			else if (!not_comment_but_links(&map, &line))
 				break ;
-//			ft_strdel(&line);
 		}
 		else
 			return (write_error("ERROR"));

@@ -28,21 +28,18 @@ int		get_cood(t_map *map, char **line, int n)
 	if (n == 0)
 	{
         map->init->charges.fast_charge = ft_atoi(dopline);
-        ft_printf("fast_charge: %d\n", map->init->charges.fast_charge);
 		if (!get_cood(map, line, 1))
 			return (0);
 	}
 	else if (n == 1)
 	{
         map->init->charges.midd_charge = ft_atoi(dopline);
-        ft_printf("midd_charge: %d\n", map->init->charges.midd_charge);
 		if (!get_cood(map, line, 2))
 			return (0);
 	}
 	else if (n == 2)
 	{
 		map->init->distance_to_next_station = strtod(dopline, NULL);
-		printf("distance: %f\n", map->init->distance_to_next_station);
 	}
 	return (1);
 }
