@@ -39,8 +39,6 @@ void	init(t_map *map, char **av)
 
 int		work(t_map *map)
 {
-	t_car *cars;
-
 	if (map->flag == 1 && is_valid_map(*map) && is_answer(*map))
 	{
 		ft_printf("\n");
@@ -48,7 +46,7 @@ int		work(t_map *map)
 				map->station[map->end_station_id].links_amount);
 		find_ways(map, 0);
 		print_ways(*map);
-		move_cars(*map);
+		move_cars(map);
 		return (1);
 	}
 	return (write_error("ERROR"));
@@ -121,7 +119,7 @@ int		main(int ac, char **av)
 				break ;
 			else if (!not_comment_but_links(&map, &line))
 				break ;
-			ft_strdel(&line);
+//			ft_strdel(&line);
 		}
 		else
 			return (write_error("ERROR"));

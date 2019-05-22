@@ -61,7 +61,7 @@ int				ft_list_size(t_list_stations *dop)
 
 	i = 0;
 	stations_list = dop;
-	while (stations_list)
+	while (stations_list->next)
 	{
 		stations_list = stations_list->next;
 		i++;

@@ -93,6 +93,7 @@ void	find_ways(t_map *map, int flag)
 		i.x = -1;
 		while (++i.x < dop2->links_amount)
 		{
+		    printf("flag: %d u %s\n ", map->station[dop2->links[i.x]].flag, map->station[dop2->links[i.x]].name);
 			if (map->station[dop2->links[i.x]].flag != 1 && map->station[
 		dop2->links[i.x]].flag != 2 && !find_ways_dop(map, &way, dop2, i))
 				return ;

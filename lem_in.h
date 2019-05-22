@@ -76,6 +76,7 @@ typedef struct		    	s_map
     int				    	flag;
     int				    	start_station_id;
     int				    	end_station_id;
+    float                   time;
     t_list_stations	    	*init;
     t_list_stations	    	*dop;
     t_list_stations	    	**ways;
@@ -101,7 +102,7 @@ void				    	station_init(t_map *map);
 void			    		make_stations(t_map *map);
 void			    		free_list(t_list_stations **dop);
 void	                    print_ways(t_map map);
-int				    		move_cars(t_map map);
+int				    		move_cars(t_map *map);
 int				    		write_error(char *s);
 t_car			    		*create_cars(int cars_amount);
 t_list_stations	    		*ft_list_station_new(t_station station);

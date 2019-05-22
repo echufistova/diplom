@@ -54,10 +54,16 @@ int		find_link_dop(t_map map, char *dop, char **name, t_point ij)
 
 int		find_link(t_map *map, char **line, int k)
 {
+    int l;
+    int n;
+    int m;
 	t_point	ij;
 	char	*dop;
 	char	*name;
+	char    *tmp;
 
+	n = -1;
+	m = -1;
 	ij.y = -1;
 	dop = ft_strchr(*line, '-');
 	name = ft_strsub(*line, 0, dop - *line);
@@ -69,7 +75,14 @@ int		find_link(t_map *map, char **line, int k)
 		add_link(map, dop, ij.x);
 		if (++k < 2)
 		{
-			dop = ft_strcat(ft_strcat(dop, "-"), name);
+		    l = ft_strlen(dop) + ft_strlen(name) + 1;
+            tmp = ft_strnew(l);
+		    while (++n < ft_strlen(dop))
+		        tmp[n] = dop[n];
+		    tmp[n] = '-';
+            while (++n < l)
+                tmp[n] = name[++m];
+			dop = ft_strdup(tmp);
 			find_link(map, &dop, k);
 		}
 		ft_strdel(&name);
