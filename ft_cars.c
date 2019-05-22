@@ -21,63 +21,106 @@ int		from_start_to_end(t_map map)
 	return (1);
 }
 
-int way_to_fast_charge(t_list_stations	*way, float mileage, float car_mileage)
+int way_to_fast_charge(t_map *map, t_list_stations **way)
 {
     t_list_stations *tmp;
-    float km;
+    float dop_mileage;
+    float dop_time;
 
-    tmp = way->next;
-    km = 0;
-    while (tmp->next && tmp->charges.fast_charge != 1) {
-        km += tmp->distance_to_next_station;
+    tmp = (*way);
+    dop_mileage = 0;
+    dop_time = 0;
+    while (tmp) {
+        if (map->mileage + tmp->distance_to_next_station < map->car.mileage) {
+            printf("to next %s -  %f\n", tmp->name, tmp->distance_to_next_station);
+            if (tmp->charges.fast_charge)
+            {
+                (*way) = tmp;
+                dop_mileage = map->mileage;
+                printf("dop mil %f\n", dop_mileage);
+                dop_time = map->time;
+            }
+            map->km += tmp->distance_to_next_station;
+            map->mileage += tmp->distance_to_next_station;
+        } else {
+            map->mileage = 0;
+            map->km = dop_mileage;
+            map->time = dop_time;
+            printf("ну мы заехали на %s, потому что проехали уже %f kms\n\n", (*way)->name, map->km);
+
+            tmp = (*way);
+        }
+        map->time += (*way)->distance_to_next_station / (float)100;
         tmp = tmp->next;
     }
-    if (km < car_mileage - mileage) {
-//        printf("\n\nkm to fast charge %f skldalsfl - %f  v %s\n\n", km, car_mileage - mileage, tmp->name);
-        printf("going to %s\n\n", tmp->name);
-        return (1);
-    }
+//    if (map->km < map->car.mileage) {
+//        printf("ну мы типа можем доехать до %s\n\n", (*way)->name);
+//        return (1);
+//    }
     return (0);
-
 }
 
 int		move_cars(t_map *map)
 {
-	int j;
+    int j;
     t_list_stations	*way;
+    t_list_stations	*way2;
 
     j = -1;
-    print_ways(*map);
     way = map->ways[0];
     map->car.way_size = ft_list_size(way) - 1;
-	while (++j < map->station[map->start_station_id].links_amount) {
+    while (++j < map->station[map->start_station_id].links_amount) {
         if (map->station[map->start_station_id].links[j] == map->end_station_id &&
             from_start_to_end(*map))
             return (1);
     }
- 	while (1 <= map->car.way_size) {
-        map->car.way_size = ft_list_size(way) - 1;
-//	    printf("\ncar_mileage: %f - map.km: %f\n\n", map->car.mileage, map->mileage);
-//	    way_to_fast_charge(way, map->mileage, map->car.mileage);
-        if (map->car.way_size - 1 >= 1 && map->mileage + (int)way->next->distance_to_next_station < map->car.mileage
-            && way_to_fast_charge(way, map->mileage, map->car.mileage)) {
-//            printf("                               going through %s wasting ", way->name);
-            map->car.way = way;
-            map->car.way_size = ft_list_size(way) - 1;
-            map->mileage += (int)(way->distance_to_next_station);
-//            printf("time: %f\n", (way->distance_to_next_station/100));
-            map->time += way->distance_to_next_station / (float)100;
-            way = way->next;
-        }
-        else {
-            map->time += (way->charges.fast_charge == 1) ? map->car.time_fast_charge : map->car.time_midd_charge;
-            printf("we are charging here : %s\n during %f", way->name, (way->charges.fast_charge == 1) ? map->car.time_fast_charge : map->car.time_midd_charge); ;
-            way = way->next;
-            map->mileage = 0;
-        }
-        map->km += way->distance_to_next_station;
-	}
-	printf("\nwhole time: %f and %f kms\n", map->time, map->km);
-	return (1);
+//    while (way->next)
+//    {
+        way_to_fast_charge(map, &way);
+//        if (map->km )
+//        way = way->next;
+//    }
+    printf("\nwhole time: %f and %f kms\n", map->time, map->km);
+    return (1);
 }
+
+//int		move_cars(t_map *map)
+//{
+//	int j;
+//    t_list_stations	*way;
+//
+//    j = -1;
+//    print_ways(*map);
+//    way = map->ways[0];
+//    map->car.way_size = ft_list_size(way) - 1;
+//	while (++j < map->station[map->start_station_id].links_amount) {
+//        if (map->station[map->start_station_id].links[j] == map->end_station_id &&
+//            from_start_to_end(*map))
+//            return (1);
+//    }
+// 	while (1 <= map->car.way_size) {
+//        map->car.way_size = ft_list_size(way) - 1;
+////	    printf("\ncar_mileage: %f - map.km: %f\n\n", map->car.mileage, map->mileage);
+////	    way_to_fast_charge(way, map->mileage, map->car.mileage);
+//        if (map->car.way_size - 1 >= 1 && map->mileage + (int)way->next->distance_to_next_station < map->car.mileage
+//            && way_to_fast_charge(way, map->mileage, map->car.mileage)) {
+////            printf("                               going through %s wasting ", way->name);
+//            map->car.way = way;
+//            map->car.way_size = ft_list_size(way) - 1;
+//            map->mileage += (int)(way->distance_to_next_station);
+////            printf("time: %f\n", (way->distance_to_next_station/100));
+//            map->time += way->distance_to_next_station / (float)100;
+//            way = way->next;
+//        }
+//        else {
+//            map->time += (way->charges.fast_charge == 1) ? map->car.time_fast_charge : map->car.time_midd_charge;
+//            printf("we are charging here : %s\n during %f", way->name, (way->charges.fast_charge == 1) ? map->car.time_fast_charge : map->car.time_midd_charge); ;
+//            way = way->next;
+//            map->mileage = 0;
+//        }
+//        map->km += way->distance_to_next_station;
+//	}
+//	printf("\nwhole time: %f and %f kms\n", map->time, map->km);
+//	return (1);
+//}
 
