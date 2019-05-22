@@ -57,13 +57,11 @@ typedef struct		    	s_car
 {
     char                    *name;
 	int				    	number;
-	int                     max_speed;
-	int                     mileage;
+	float                   mileage;
 	float                   time_midd_charge;
     float                   time_fast_charge;
 	t_list_stations	    	*way;
 	int				    	way_size;
-	int				    	currnet_index;
 }					       	t_car;
 
 typedef struct		    	s_map
@@ -71,12 +69,12 @@ typedef struct		    	s_map
     int					    cars_amount;
     int					    car_amount;
     int					    ways_amount;
-    int                     km;
-    int                     mileage;
     int				    	flag;
     int				    	start_station_id;
     int				    	end_station_id;
     float                   time;
+    float                   km;
+    float                   mileage;
     t_list_stations	    	*init;
     t_list_stations	    	*dop;
     t_list_stations	    	**ways;
@@ -109,17 +107,17 @@ t_list_stations	    		*ft_list_station_new(t_station station);
 
 static const t_car nissan_leaf =
         {
-                "Nissan Leaf", 1, 144, 250, 3, 0.5, NULL, 0
+                "Nissan Leaf", 1, 250, 3, 0.5, NULL, 0
         };
 
 static const t_car bmw_i3 =
         {
-                "BMW i3", 2, 150, 300, 3.25, 0.6667, NULL, 0
+                "BMW i3", 2, 150, 3.25, 0.6667, NULL, 0
         };
 
 static const t_car tesla_model_s =
         {
-                "Tesla Model S", 3, 225, 480, 6, 1, NULL, 0
+                "Tesla Model S", 3, 480, 6, 1, NULL, 0
         };
 
 #endif

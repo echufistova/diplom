@@ -27,16 +27,15 @@ int		get_cood(t_map *map, char **line, int n)
 	}
 	if (n == 0)
 	{
-		ft_printf("HELLO\n");
-		map->init->charges.midd_charge = ft_atoi(dopline);
-        ft_printf("midd_charge: %d\n", map->init->charges.midd_charge);
+        map->init->charges.fast_charge = ft_atoi(dopline);
+        ft_printf("fast_charge: %d\n", map->init->charges.fast_charge);
 		if (!get_cood(map, line, 1))
 			return (0);
 	}
 	else if (n == 1)
 	{
-		map->init->charges.fast_charge = ft_atoi(dopline);
-		ft_printf("fast_charge: %d\n", map->init->charges.fast_charge);
+        map->init->charges.midd_charge = ft_atoi(dopline);
+        ft_printf("midd_charge: %d\n", map->init->charges.midd_charge);
 		if (!get_cood(map, line, 2))
 			return (0);
 	}
